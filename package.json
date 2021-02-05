@@ -5,8 +5,7 @@
   "scripts": {
     "lint:commit": "commitlint --from dd16e75 --verbose",
     "test": "mocha ./test/**/*.js --timeout 0 --exit",
-    "aetest": "aeproject test",
-    "postinstall": "node .scripts/postinstall.js"
+    "aetest": "aeproject test"
   },
   "author": "Milen Radkov <milenradkov@me.com>",
   "license": "ISC",
