@@ -1,13 +1,14 @@
 {
-  "name": "aeproject-boilerplate",
+  "name": "contracts-sophia",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "lint:commit": "commitlint --from dd16e75 --verbose",
     "test": "mocha ./test/**/*.js --timeout 0 --exit",
     "aetest": "aeproject test",
     "postinstall": "node .scripts/postinstall.js"
   },
-  "author": "",
+  "author": "Milen Radkov <milenradkov@me.com>",
   "license": "ISC",
   "dependencies": {
     "@aeternity/aepp-sdk": "^7.5.0",
@@ -19,6 +20,12 @@
     "chai": "^4.2.0"
   },
   "devDependencies": {
-    "mocha": "^8.0.1"
-  }
+    "@commitlint/cli": "^11.0.0",
+    "@commitlint/config-conventional": "^11.0.0",
+    "mocha": "^8.0.1",
+    "pre-commit": "^1.2.2"
+  },
+  "pre-commit": [
+    "lint:commit"
+  ]
 }
